@@ -2,7 +2,7 @@
 
 Web APIs, NLP and Classification to answer to the question
 
-"What differentiates the player communities for Call of Duty and Dungeons and Dragons?"
+"What differentiates the player communities for **Call of Duty** and **Dungeons and Dragons**?"
 
 ### Contents:
 - [Executive Summary](#Executive-Summary)
@@ -64,23 +64,27 @@ were tuned and evaluated. All 4 models were able to classify a new post as comin
 |Best CountVec - MultiNB|0.9214|0.8373|0.8511|0.8795|
 |Best TfidfVec - SVC|0.8908|0.9331|0.9307|0.9118|
 
-With this high level of performance, any of the models could be used to move to the next step. The terms with the greatest predictive power for each group are shown below.
+With this high level of performance, any of the models could be used to move to the next step. However, models with a logistic regression estimator are better candidates for exploring the impact of the terms since each term can be paired with its relative importance to the model. Using the CountVectorizer + LogisticRegression model, the terms with the greatest predictive power for each group are shown below.
 
 ![NLP top predictive vocab](assets/NLP_top_predictive_vocab.png)
 
 ### Next Steps
 
 A follow-up study could be designed to explore questions such as these:
+
 - Do most community discussions center around game mechanics? Is this true for other games and for other online communities outside of reddit?   
   - Call of Duty: warzone, lobby, mission, etc.   
   - Dungeons and Dragons: dice, dm (dungeon master), oc (original character), etc.
-- Does the non-game-mechanic vocabulary indicate how the community sees their interaction with the game?
+- The non-game-mechanic vocabulary seems to indicate how the community sees their interaction with the game:
   - Call of Duty:
     - 'remastered' --> waiting for new content
     - 'opinion' --> evaluating the game as an observer / consumer
   - Dungeons and Dragons:
     - 'art' --> appreciating provided artwork and/or generating new artwork
     - 'homebrew' --> making contributions and/or actively engaging in creating the game experience   
+  - Is part of this difference due to the upcoming release of new versions of Call of Duty?
+  - If data were pulled from other time periods, would this be replaced by something else, and if so, what might that be?
+  - If this difference is an accurate insight, can it be correlated with sales of other merchandise such as posters or paintable figures?
 
 _Note: 'homebrew' is a term akin to 'fan fiction' that indicates assets or creative content made by players rather than by the original game designers._
 
@@ -94,7 +98,7 @@ The fact that over 4000 posts were made to each of these subreddits in less than
 
 In the case of Call of Duty, continued player engagement will likely focus on in-game and meta-game content provided by the game company.
 
-In the case of Dungeons and Dragons, continued player engagement will likely focus on creative aspects of the game and player-generated art. Continued engagement may focus on provided encouragement and support for players to engage with materials outside game play.
+In the case of Dungeons and Dragons, continued player engagement will likely focus on creative aspects of the game and player-generated art. Continued engagement may focus on providing encouragement and support for players to engage with materials outside game play.
 
 ## References
 
@@ -103,4 +107,8 @@ In the case of Dungeons and Dragons, continued player engagement will likely foc
 [Pushshift's API](https://github.com/pushshift/api)    
 
 [Call of Duty subreddit](https://www.reddit.com/r/CallOfDuty/)     
-[Dungeons and Dragons subreddit](https://www.reddit.com/r/DnD/)    
+[Dungeons and Dragons subreddit](https://www.reddit.com/r/DnD/)
+
+
+----------------------------------------------------------------------------
+[Data Science Portfolio](https://jshaffer94247.github.io/)
